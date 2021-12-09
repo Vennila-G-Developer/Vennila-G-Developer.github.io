@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<script type="text/javascript">  
+function displayname(){  
+var user_name=document.getElementById("form-name").value;  
+var phone_number = document.getElementById("form-phone").value; 
+document.getElementById("display_content").innerHTML = "Contact:"+user_name+"@"+phone_number;
+}  
+</script>  
+
+<style>
+body {
+  background-image: url('img/crypto_1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+#logo {
+  display: inline-block;
+ /* margin: 15px;  margin: 20px was off */
+  float: left;
+  height: 200px;
+  width: auto; /* correct proportions to specified height */
+  border-radius: 50%; /* makes it a circle */
+}
+
+h1 {
+color:cyan;
+padding-left:100px;
+}
+
+#caption{
+display: inline-block;
+position:absolute; 
+left:350px; 
+top:30px;
+}
+
+#contact{
+display: inline-block;
+position:absolute; 
+left:150px; 
+top:250px;
+}
+
+#form{
+display: inline-block;
+position:absolute; 
+left:350px; 
+top:400px;
+}
+
+.btn{
+width:150px;
+border-radius:10px;
+font-size:16px;
+background-color:cyan;
+padding:7px 15px;
+border:1px;
+position:relative;
+top:50%;
+left:30%;
+}
+
+#form-name, #form-phone{
+width:250px;
+border-radius:10px;
+padding:7px 15px;
+}
+
+</style>
+
+<title>Universal Trades</title>
+
+</head>
+
+<body>
+	<a href="#"><img id="logo" src="img/logo_1.png"></a>
+
+	<div id="caption">
+		<p style = "color:white; font-size: 30px;">Easy way to get </p>
+		<h1>Tron Coin(Cryptocurrency)</h1>
+		<p style = "text-align:right; color:white; font-size: 30px;">From your home</p>
+	</div>
+
+	<div id="contact">
+		<p style = "color:white; font-size: 30px;" id="display_content">Contact: M.A.Ganesh @ 8610079064</p>
+		<p style = "color:white; font-size: 30px;">Enter your name & phone number and send to your referals</p>
+	</div>
+	
+	<div id="form">
+		<form method="get">
+			<div>
+				<label>Name:</label>
+				<input type="text" name="name" id="form-name" required>      
+			</div><br>
+			<div>
+				<label>Phone:</label>
+				<input type="tel" id="form-phone" name="phone" pattern="[0-9]{10}" required>
+			</div><br>
+			<input type="button" value="Send" class="btn" onclick="displayname()">
+		</form>
+	</div>
+
+</body>
+</html>
